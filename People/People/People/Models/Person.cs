@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
+﻿using SQLite;
 
 namespace People.Models
 {
     [Table("T_People")]
-  public class Person
+    public class Person
     {
         // Miembro: Properties
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-      [MaxLength(50)]
+        [MaxLength(50)]
         public string Name { get; set; }
     }
 }
