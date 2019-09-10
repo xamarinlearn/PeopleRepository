@@ -42,6 +42,11 @@ namespace People
                     $"{result} registro agregado [Nombre: " +
                     $"{newPerson.Name}, ID:{newPerson.Id}";
             }
+            else
+            {
+                StatusMessage =
+                    "Registro no ingresado";
+            }
         }
 
 
