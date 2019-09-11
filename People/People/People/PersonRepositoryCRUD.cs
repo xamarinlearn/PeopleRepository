@@ -1,5 +1,6 @@
 ﻿using People.Models;
 using SQLite;
+using System.Collections.Generic;
 
 namespace People
 {
@@ -33,7 +34,7 @@ namespace People
         */
         public void CreatePerson(Person newPerson)
         {
-           
+
             int result;
             result = conn.Insert(newPerson);
             if (result == 1)
@@ -50,25 +51,16 @@ namespace People
         }
 
 
+        public List<Person> GetAllPeople()
+        {
+            return conn.Table<Person>().ToList();
+        }
+
 
 
     }
 
-    class Car
-    {
-        // Catacterísticas o Propiedades
-        public int NPlaca { get; set; }
-        public string Modelo { get; set; }
 
-        // Métodos acciones
-        void Arrancar()
-        {
-            //
-        }
-        void Avanzar()
-        {
-            //
-        }
 
-    }
+
 }
